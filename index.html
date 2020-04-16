@@ -5,11 +5,12 @@
         <title>Project: Blog</title>
         <style>
             body{
-                background-color: rgb(190, 194, 170);
+                background-color: rgb(200, 200, 200);
                 font-family: sans-serif;
-            }
-            ul li{
-                font-style: italic;
+                font-size: 15px;
+                margin: 0px;
+                border: solid;
+                padding: 0px;
             }
             h1{
                 text-align: center;
@@ -17,46 +18,101 @@
                 text-decoration: underline;
             }
             h2{
-                text-align: center;
                 font-weight: bold;
-                text-decoration: underline;
-                
+                text-decoration: underline;  
             }
             h6 {
                 font-family: monospace;
             }
+            li {
+            	position: relative;
+            	right: 25px;
+            }
+            .top {
+                margin-left: 30%;
+                margin-right: 30%;
+            }
             .post {
                 margin: 20px;
-                background-color: rgb(190, 210, 170);
+                background-color: rgb(250, 250, 250);
+                border: solid;
+                border-width: 2px;
+                margin: 5px;
+                padding: 5px;
             }
-            
+            #posts {
+            	margin: 30%;
+            	margin-top: 0px;
+            }
+            #contents {
+            	position: fixed;
+            	margin-left: 30px;
+
+            }
+            #posts {
+				margin-bottom: 0px;
+            }
+            #down {
+            	background-color: rgb(150, 150, 150);
+            	height: 100px;
+            	text-align: center;
+            	font-size: 2em;
+            	overflow: hidden;
+            }
+            #button {
+            	color: rgb(150, 150, 150);
+            	background-color: rgb(200, 200, 200);
+            	border-color: black;
+            	border: solid;
+            	text-decoration: none;
+            }
         </style>
     </head>
     <body>
-        
-        <h1>Nikolay Savchenko's blog</h1>
 
-        <h3>Contents</h3>
-        <ul>
-            <li><a  href="#first-post">First post!</a></li>
-            <li><a  href="#second-post">About my "career"</a></li>
-        </ul>
-        <div class="post">
-            <h2 id="first-post">First post</h2>
-        <h6>Posted on 4.15.2020</h6>
-        
-        <p>Now i decide (actually i have to) do this blog. I'm blogger now!. It's exciting! And my English is very bad, i know</p>
+    	<!-- TOP -->
+
+        <div id="top" class="top">
+            <h1>Nikolay Savchenko's blog</h1>
         </div>
-        <div class="post">
-        <h2><a id="second-post">About my "career"</a></h2>
-        <h6>Posted on 4.15.2020</h6>
-        
-        <p>Hello world. I started to learn programming two weeks ago. And now i ended the course "Intro to JS". Right now i'm learning the course " Intro to HTML/CSS". And you know, i really enjoy it.</p>
+
+        <!-- CONTENTS -->
+
+        <div id="contents">
+	        <h3>Contents</h3>
+	        <ul>
+	            <li><a  href="#first-post">First post!</a></li>
+	            <li><a  href="#second-post">Distance learning</a></li>
+	            <li><a  href="#third-post">Begining</a></li>
+	        </ul>
         </div>
-        <div class="post">
-            <h2 id="third-post">Third post</h2>
-            <h6>Posted on 4.15.2020</h6>
-            <p>When i strated do learn programming i didn't not everything. But now i can do websites. Sure they are a little bit weird, but it's just start. And i think i can more. Good luck!</p>
+
+		<!-- POSTS -->
+
+        <div id="posts">
+	        <div class="post">
+		        <h2 id="first-post">First post</h2>
+		        <h6>Posted on 4.15.2020</h6>
+		        <p>Now i decided (actually i had to) do this blog. I'm blogger now!. It's exciting! And my English is very bad, i know.</p>
+		        <p>I started to learn programming two weeks ago. Now i ended the course "Intro to JS" and start learning the course " Intro to HTML/CSS". And you know, i really enjoy it.</p> 
+		        <p>When i strated do learn programming i didn't not everything. But now i can do websites. Sure they are a little bit weird, but it's just start. And i think i can more. Good luck!</p>
+	        </div>
+	        <div class="post">
+		        <h2><a id="second-post">Distance learning</a></h2>
+		        <h6>Posted on 4.16.2020</h6>
+		        <p>I hate distance learning. Homework has become very large and takes longer. But I can easily get a good grade.</p>
+	        </div>
+	        <div class="post">
+	            <h2 id="third-post">Begining</h2>
+	            <h6>Posted on 4.15.2020</h6>
+	            <p>Now i decided (actually i had to) do this blog. I'm blogger now!. It's exciting! And my English is very bad, i know. I started to learn programming two weeks ago. Now i ended the course "Intro to JS" and start learning the course " Intro to HTML/CSS". And you know, i really enjoy it. When i strated do learn programming i didn't not everything. But now i can do websites. Sure they are a little bit weird, but it's just start. And i think i can more. Good luck!</p>
+	        </div>
+        </div>
+
+        <!-- BOTTOM -->
+
+        <div id="down">
+        	<p><a id="button" href="#top">GO TO THE TOP</a></p>
         </div>
     </body>
 </html>
