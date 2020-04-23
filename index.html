@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My Blog</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </head>
+    <body>
+
+    	<!-- HEADER -->
+
+		<div id="header" class="header">
+		  <h1>My blog</h1>
+		  <ul class="header-list">
+		  	<li class="header-list"><a href="">Contents</a></li>
+		  	<li class="header-list"><a href="">About</a></li>
+		  </ul>
+		</div>
+
+		<!-- POST CREATER -->
+
+		<div id="post-creater">
+			<h2>Create post</h2>
+			<h5>Title:</h5>
+			<p><input type="text" id="title"></p>
+			<h5>Date:</h5>
+			<p><input type="text" id="date"></p>
+			<h5>My message:</h5>
+			<p><input type="text" id="message"></p>
+			<button id="submit-button">Submit</button>
+		</div>
+
+		<!-- POSTS -->
+
+			<div class="post">
+	            <h2 id="7-post">I delete it</h2>
+	            <h6>Posted on 4.23.2020</h6>
+	            <p>I delete this function because i don't like how it works now. I'll keep lerning how to do it better. See ya on version 2.0 with this function.</p>
+	        </div>
+			<div class="post">
+	            <h2 id="6-post">I did it</h2>
+	            <h6>Posted on 4.23.2020</h6>
+	            <p>I did it! Now i can post posts on my website instead in code! It;s been very hard to do. And now i'm very happy. But there's a lot of promblem: i can't do anything but posted: i can't make it bold, italic, underline, new paragraph. and new post delete after reload it's terrible</p>
+	        </div>
+			<div class="post">
+	            <h2 id="5-post">I don't hear anything but noise</h2>
+	            <h6>Posted on 4.22.2020</h6>
+	            <p>My acoustic system is broken. Actually cable from my computer to acoustic system is broken and i hear only noise. But i don't get upset and just listening to music/etc using my phone.</p>
+	        </div>
+			<div class="post">
+	            <h2 id="4-post">My goals</h2>
+	            <h6>Posted on 4.18.2020</h6>
+	            <p>Now i wanna show up my goals for life) So:</p>
+	            	<ul>
+	            		<li>Learn JavaScript</li>
+	            		<li>Learn HTML & CSS</li>
+	            		<li>Learn Python</li>
+	            		<li>Learn how to create sites.</li>
+	            	</ul>
+	        </div>
+			<div class="post">
+	            <h2 id="3-post">Gaming</h2>
+	            <h6>Posted on 4.17.2020</h6>
+	            <p>Today i ended Assassin's creed II. It's amazing gaming and my favorite story (about assassins). Now i decide to start playing Assassin's creed Brotherhood. For now i noticed graphics got better, hd minimap and interface, i like it</p>
+	        </div>
+	        <div class="post">
+		        <h2><a id="2-post">Distance learning</a></h2>
+		        <h6>Posted on 4.16.2020</h6>
+		        <p>I hate distance learning. Homework has become very large and takes longer. But I can easily get a good grade.</p>
+	        </div>
+	        <div class="post">
+		        <h2 id="1-post">First post</h2>
+		        <h6>Posted on 4.15.2020</h6>
+		        <p>Now i decided (actually i had to) do this blog. I'm blogger now!. It's exciting! And my English is very bad, i know.</p>
+		        <p>I started to learn programming two weeks ago. Now i ended the course "Intro to JS" and start learning the course " Intro to HTML/CSS". And you know, i really enjoy it.</p> 
+		        <p>When i strated do learn programming i didn't not everything. But now i can do websites. Sure they are a little bit weird, but it's just start. And i think i can more. Good luck!</p>
+	        </div>
+        <!-- BOTTOM -->
+
+		<div class="button">
+			<h1 id="go-to-the-top"><a href="#header">GO TO THE TOP</a></h1>
+		</div>
+		<script type="text/javascript">
+			var submitButton = document.getElementById("submit-button");
+
+			var submit = function () {
+				var postTitle = document.getElementById("title").value;
+				var postDate = document.getElementById("date").value;
+				var postMessage = document.getElementById("message").value;
+				var newPost = document.createElement("div");
+				var idNumber = "8-post";
+				newPost.className = "post";
+				newPost.id  = idNumber;
+				document.body.appendChild(newPost);
+				var newTitle = document.createElement("h2");
+				newTitle.innerHTML = postTitle;
+				newPost.appendChild(newTitle);
+				var newDate = document.createElement("h6");
+				newDate.innerHTML ="Posted on: " + postDate;
+				newPost.appendChild(newDate);
+				var newText = document.createElement("p");
+				newText.innerHTML = postMessage;
+				newPost.appendChild(newText);
+				
+				
+			}
+			submitButton.addEventListener('click', submit);
+		</script>
+    </body>
+</html>
